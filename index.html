@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing page</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      * {
+        margin: 0;
+      }
+      body {
+        background-color: rgb(204, 200, 200);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      section {
+        background-color: white;
+        height: 100vh;
+        width: 100%;
+      }
+      .div1 {
+        padding: 15px 0 0 30px;
+        background-color: white;
+        height: 12vh;
+      }
+      .div_1 {
+        display: flex;
+        align-items: center;
+        color: rgb(2, 75, 2);
+      }
+      .ref {
+        float: right;
+        margin-top: -30px;
+        padding-right: 20px;
+        font-size: smaller;
+      }
+      a {
+        padding: 0 5px 0px 5px;
+        text-decoration: none;
+      }
+      hr {
+        border: 5px solid rgb(2, 75, 2);
+        margin: 0 20px 0 20px;
+        border-radius: 5px;
+      }
+      .h4 {
+        padding: 30px 0% 0px 20px;
+        font-size: 25px;
+        font-weight: 900;
+        color: white;
+      }
+      .h4_1 {
+        padding: 5px 0% 30px 20px;
+        font-size: 25px;
+        font-weight: 900;
+        color: white;
+      }
+      .div2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
+        text-align: justify;
+      }
+      form {
+        padding: 10px 0 0 20px;
+      }
+      input {
+        margin-bottom: 5px;
+        width: 15rem;
+        border-radius: 5px;
+        border: none;
+      }
+      .p4 {
+        color: white;
+      }
+      .btn {
+        margin-top: px;
+        padding: 3px;
+        border-radius: 5px;
+        color: white;
+        background-color: rgb(2, 75, 2);
+        border: none;
+      }
+      .btn:hover {
+        background-color: black;
+      }
+      .popup {
+        width: 200px;
+        height: 100px;
+        background: linear-gradient(rgb(156, 218, 11), rgb(5, 59, 5));
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        color: white;
+        visibility: hidden;
+        padding-top: 50px;
+      }
+      .open-popup {
+        visibility: visible;
+        transform: translate(-50%, -50%);
+      }
+      aside {
+        color: rgb(2, 75, 2);
+        text-align: justify;
+        padding: 10px 20px 0 20px;
+      }
+      .as {
+        background-color: white;
+      }
+      .free {
+        background-color: rgb(144, 211, 10);
+      }
+      main {
+        background-color: rgb(144, 211, 10);
+      }
+      .p3 {
+        background-color: rgb(2, 75, 2);
+        float: right;
+        margin-top: -20px;
+        padding: 4px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: beige;
+      }
+      a:hover {
+        color: rgb(2, 75, 2);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="div1">
+        <div class="div_1">
+          <h2 class="h2">inkling</h2>
+        </div>
+        <div class="ref">
+          <a href="about.html">About Us</a>
+          <a href="about.html">Contact Us</a>
+        </div>
+      </div>
+      <hr />
+      <div class="free">
+        <h3 class="h4">Free eBook</h3>
+        <h3 class="h4_1">Empowering Remote Worker</h3>
+      </div>
+
+      <main>
+        <div class="div2">
+          <p class="p1">
+            Make sure your distributed workforce is equipped with the proper
+            knowledge and information they need to succed-every time.
+          </p>
+          <br />
+          <p>
+            Gone are the days when every employee worked in a single office, and
+            institutional knowledge could simply be shared in a handbook or an
+            all- hands meeting. Today, the typical organization's workforce
+            consists of field, branch, staff, and other non-corperate employees,
+            and many of them are scattered across time zones, continents, and
+            workforce devices.
+          </p>
+          <br />
+
+          <a href="about.html" class="p3">Read More</a>
+        </div>
+        <div>
+          <form action="*">
+            <p class="p4">Sign up for your copy:</p>
+            <p>
+              <input type="text" placeholder="First Name" required />
+            </p>
+            <p>
+              <input type="text" placeholder="Last Name" required />
+            </p>
+            <p>
+              <input type="email" placeholder="Email Address" required />
+            </p>
+            <p>
+              <input type="text" placeholder="Job Title" required />
+            </p>
+            <p>
+              <input type="text" placeholder="Company Name" required /> <br />
+            </p>
+            <p>
+              <input type="tel" placeholder="Phone Number" required />
+            </p>
+            <div class="container">
+              <button type="summit" class="btn" onclick="openPopup()">
+                SUBMIT
+              </button>
+              <div class="popup" id="popup">
+                <p>Submitted successfully!</p>
+                <button type="button" onclick="closePopup()">OK</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+      <div class="as">
+        <aside>
+          In this eBook, well show you that with a mobile -friendly content
+          platform, you can increase employee productivity while slashing the
+          costs associated with training, onboading and employee misinformation.
+        </aside>
+      </div>
+    </section>
+    <script>
+      let popup = document.getElementById("popup");
+      function openPopup() {
+        popup.classList.add("open-popup");
+      }
+      function closePopup() {
+        popup.classList.remove("open-popup");
+      }
+    </script>
+  </body>
+</html>
